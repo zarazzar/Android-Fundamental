@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">MyPetStore</string>
+    <string name="title">CityPetStore</string>
+    <string name="submission_by_azzarrizky">submission by AzzarRizky</string>
+
+    <string name="store_name">Nama Toko</string>
+    <string name="store_address">Jalan / Alamat Toko</string>
+    <string name="open_time">09:00 – 01:00</string>
+    <string name="phone_number">089999999999</string>
+    <string name="share">share</string>
+    <string name="Azzar_Rizky">about me</string>
+    <string name="about_me">About me</string>
+    <string name="my_name">Azzar Rizky</string>
+    <string name="my_email">azzar.arza18@gmail.com</string>
+    <string name="my_desc">Undergraduate student at Multi Data Palembang University \n Mobile Develompent Cohort at Bangkit Academy 2023 H 2</string>
+
+    <!--data petshop-->
+    <string-array name="data_title">
+        <item>Gupo Petshop Kenten</item>
+        <item>Permata Petshop</item>
+        <item>Gracia Petshop Palembang</item>
+        <item>Oska Mini Petshop</item>
+        <item>Mercy Petshop 2 </item>
+        <item> Mouzza Petshop 2</item>
+        <item>Boboo Petshop</item>
+        <item>Mercy PetShop</item>
+        <item> Yuni Petshop</item>
+        <item>Eleven Petshop</item>
+    </string-array>
+
+    <string-array name="data_openTime">
+        <item>09:00 – 20:00</item>
+        <item>07:00 – 17:00</item>
+        <item>08:00 – 18:00</item>
+        <item>08:00 – 18:00</item>
+        <item>09:00 – 20:00</item>
+        <item>09:00 – 20:00</item>
+        <item>07:00 – 17:00</item>
+        <item>07:00 – 17:00</item>
+        <item>07:00 – 17:00</item>
+        <item>08:00 – 20:00</item>
+    </string-array>
+
+    <string-array name="data_address">
+        <item>Samping Apotik Lintang, Jl. MP. Mangkunegara No.6, 8 Ilir, Kec. Ilir Tim. II, Kota Palembang</item>
+        <item>Jl. Residen H. Najamuddin No.326, Suka Maju, Kec. Sako, Kota Palembang, Sumatera Selatan</item>
+        <item>Jalan Kenten Villa Kencana Damai No.F 16, Suka Maju, Kec. Sako, Kota Palembang, Sumatera Selatan</item>
+        <item>Jl. Komp. Kenten City, Suka Maju, Kec. Sako, Kota Palembang, Sumatera Selatan</item>
+        <item>Jl. Bougenville 3 No.ac/18, Suka Maju, Kec. Sako, Kab. Banyuasin, Sumatera Selatan</item>
+        <item>perumahan kencana damai, Jl. Asoka 3 No.34, Talang Buluh, Kec. Talang Klp., Kab. Banyuasin, Sumatera Selatan</item>
+        <item>Jl. Talang Keramat, Talang Buluh, Kec. Talang Klp., Kab. Banyuasin, Sumatera Selatan</item>
+        <item>Jl. Tunas Muda No.826, RT.01/RW.001, Suka Maju, Kec. Sako, Kota Palembang, Sumatera Selatan</item>
+        <item>Lrg. Tembusan, Sukajaya, Kec. Sukarami, Kota Palembang, Sumatera Selatan</item>
+        <item>Jl. Sukabangun II No.503, Sukajaya, Kec. Sukarami, Kota Palembang, Sumatera Selatan</item>
+    </string-array>
+
+    <string-array name="data_phoneNumber">
+        <item>082184194803</item>
+        <item>081178789461</item>
+        <item>08117883577</item>
+        <item>082177709809</item>
+        <item>080000000000</item>
+        <item>08989847251</item>
+        <item>081367172255</item>
+        <item>081279857555</item>
+        <item>080000000000</item>
+        <item>08117879807</item>
+    </string-array>
+
+    <!--The Images i used below was a dummy images that i take from jejakpiknik.com-->
+    <string-array name="data_photo">
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/07/petshop-terbesar-di-palembang.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/08/petshop-di-pekalongan.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/07/petshop-di-bintaro-sektor-9.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2022/01/jual-kucing-persia-area-purwokerto.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/08/petshop-di-mojokerto.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/08/petshop-di-kudus.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/07/petshop-di-cikarang-utara.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/07/petshop-terlengkap-di-kediri.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/08/petshop-di-purbalingga.jpg</item>
+        <item>https://jejakpiknik.com/wp-content/uploads/2021/08/petshop-di-tulungagung.jpg</item>
+    </string-array>
+
+
+</resources>

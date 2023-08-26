@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <ImageButton
+                android:id="@+id/ib_favourite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#36000000"
+                android:src="@drawable/ic_favourite" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextContent.TitleDetail"
+            android:text="@string/store_name"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_openTime"
+            style="@style/TextContent"
+            android:layout_marginStart="16dp"
+            android:text="@string/open_time"
+            app:drawableStartCompat="@drawable/ic_time" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/TextContent.MarginText"
+            android:text="@string/store_address" />
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/lightGreen"
+            android:text="@string/phone_number"
+            />
+
+        <Button
+            android:id="@+id/action_share"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/share"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/gray"
+            android:layout_marginBottom="16dp"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
