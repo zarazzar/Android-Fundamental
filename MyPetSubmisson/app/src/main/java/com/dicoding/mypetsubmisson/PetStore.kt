@@ -9,5 +9,6 @@ data class PetStore(
     val openTime: String,
     val address: String,
     val phoneNumber: String,
-    val photo: String
+    val photo: String,
+    val description: String
 ) : Parcelable

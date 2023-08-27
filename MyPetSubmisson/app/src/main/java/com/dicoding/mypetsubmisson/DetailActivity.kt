@@ -28,6 +28,7 @@ class DetailActivity : AppCompatActivity() {
             binding.tvOpenTime.text = " opens at ${data.openTime}"
             binding.tvAddress.text = data.address
             binding.btnCall.text = data.phoneNumber
+            binding.tvDescription.text = data.description
 
             Glide.with(this@DetailActivity)
                 .load(data.photo)
@@ -40,11 +41,14 @@ class DetailActivity : AppCompatActivity() {
             }
 
             binding.actionShare.setOnClickListener {
-                val sendIntent = Intent(Intent.ACTION_SEND).apply {
-                    putExtra("Share this", data.title) //share nama dari petshop
+                val addressData = "Lihat nih,, Rekomendasi Petshop dari saya. \n ${data.title} , ${data.address}"
+                val sendIntent: Intent = Intent().apply {
+                    action = Intent.ACTION_SEND
+                    putExtra(Intent.EXTRA_TEXT, addressData)
                     type = "text/plain"
                 }
-                val shareIntent = Intent.createChooser(sendIntent, "Share using..")
+
+                val shareIntent = Intent.createChooser(sendIntent, null)
                 startActivity(shareIntent)
             }
 

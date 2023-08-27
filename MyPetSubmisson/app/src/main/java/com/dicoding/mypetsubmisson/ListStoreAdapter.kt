@@ -41,6 +41,7 @@ class ListStoreAdapter(private val listPetStore: ArrayList<PetStore>) :
         holder.itemPetstoreBinding.tvItemOpentime.text = openTime
         holder.itemPetstoreBinding.tvItemAddress.text = address
         holder.itemPetstoreBinding.tvItemPhonenumber.text = phoneNumber
+
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listPetStore[holder.adapterPosition]) }
 
 

@@ -51,8 +51,26 @@
 
         <TextView
             android:id="@+id/tv_address"
+            style="@style/TextContent.MarginLocation"
+            android:text="@string/store_address"
+            app:drawableStartCompat="@drawable/ic_location" />
+
+        <TextView
             style="@style/TextContent.MarginText"
-            android:text="@string/store_address" />
+            android:text="@string/tentang_toko"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@color/gray"
+            />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/TextContent"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/tentang_toko"
+            />
 
         <Button
             android:id="@+id/btn_call"

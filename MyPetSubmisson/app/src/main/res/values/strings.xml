@@ -13,6 +13,7 @@
     <string name="my_name">Azzar Rizky</string>
     <string name="my_email">azzar.arza18@gmail.com</string>
     <string name="my_desc">Undergraduate student at Multi Data Palembang University \n Mobile Develompent Cohort at Bangkit Academy 2023 H 2</string>
+    <string name="tentang_toko">Tentang Toko</string>
 
     <!--data petshop-->
     <string-array name="data_title">
@@ -81,5 +82,17 @@
         <item>https://jejakpiknik.com/wp-content/uploads/2021/08/petshop-di-tulungagung.jpg</item>
     </string-array>
 
+    <string-array name="data_description">
+        <item>Gupo Petshop merupakan Toko yang menyediakan pangan dan kebutuhan Peliharaan kesayangan anda, Seperti Makanan kucing, makanan anjing, Makanan ikan hias, dan lainnya. Gupo Petshop terdiri dari 3 cabang di kota Palembang, yaitu Gupo PetShop cabang Kenten, Gupo Petshop KM7 dan Gupo Petshop Cabang Sekip. Layanan yang di sediakan oleh Gupo Petshop terdiri dari : Cat Grooming, Dog Grooming, dan Pet Hotels</item>
+        <item>Permata Petshop Merupakan toko peliharaan yang menyediakan berbagai perlengkapan dan makanan Peliharaan anda. PetShop ini masih tergolong baru, dan belum memiliki jumlah stock makanan hewan peliharaan yang lengkap, namun anda dapat menemukan beberapa produk yang sering di jumpai pada Petshop lainnya. Permata petshop hanya menyediakan jasa Pet Hotels dan Pet Grooming. </item>
+        <item>Gracia Petshop merupakan toko yang menyediakan berbagai kebutuhan untuk binatang peliharaan seperti pakan kucing, pakan anjing, pasir wangi, aksesoris hewan peliharaan, perlengkapan grooming, vitamin, obat-obatan, kandang dan lain sebagainya. Petshop ini hadir memberikan layanan terbaik dan terlengkap dengan harga yang terjangkau.</item>
+        <item>Oska Mini Petshop merupakan toko binatang dan peliharaan yang menyediakan makanan serta vitamin untuk kucing dan anjing peliharaan. Petshop ini juga menyediakan jasa Pet Grooming yang bisa di antar dan jemput secara gratis.</item>
+        <item>Mercy Petshop 2 merupakan Toko yang menyediakan makanan kucing, pasir kucing, tempat makan/minum, makanan ayam/burung/ikan, aneka kandang, obat-obatan, dan perlengkapan lainnya. Mercy Petshop terdiri dari 2 cabang di kota Palembang, yaitu Mercy PS di Jl. Tunas Muda No.826, RT.01/RW.001, Suka Maju, Kec. Sako, Kota Palembang, Sumatera Selatan 30164, dan Mercy Petshop 2 di Jl. Bougenville 3 No.ac/18, Suka Maju, Kec. Sako, Kab. Banyuasin, Sumatera Selatan 30164.</item>
+        <item>Mouzza Petshop 2 merupakan toko peliharaan yang menyediakan berbagai makanan peliharaan dan perlengkapan lainnya seperti mainan, aksesoris, serta obat obatan. Petshop ini juga menyediakan jasa Pet Hotels dan Pet Grooming.</item>
+        <item>Boboo Petshop merupakan toko yang menyediakan berbagai perlengkapan dan kebutuhan kucing yang lengkap. Petshop ini juga menyediakan jasa Pet Grooming dan Lion Cut. Boboo Petshop terdiri dari 2 cabang yaitu Boboo Petshop Talang Keramat dan Boboo Petshop Talang Jambe.</item>
+        <item>merupakan Toko utama dari cabang Mercy PetShop yang juga menyediakan makanan kucing, pasir kucing, tempat makan/minum, makanan ayam/burung/ikan, aneka kandang, obat-obatan, dan perlengkapan lainnya.</item>
+        <item>Yuni Petshop merupakan toko peliharaan yang menyediakan berbagai perlengkapan kucing dan juga kelinci, seperti makanan kucing, shampoo kucing, Makanan kelinci, jual beli kelinci dan kandang setra akesoris lainnya.</item>
+        <item>Eleven Petshop merupakan toko peliharaan yang menyediakan berbagai perlengkapan dan kebutuhan peliharaan, seperti makanan kucing, makanan anjing, kandang , cat grass, pasir, dan obat obatan, serta perlengkapan lainnya. Selain itu, Eleven Petshop juga menyediakan jasa Pet Grooming.</item>
+    </string-array>
 
 </resources>

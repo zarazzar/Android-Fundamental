@@ -29,10 +29,11 @@ class MainActivity : AppCompatActivity() {
         val dataAddress = resources.getStringArray(R.array.data_address)
         val dataPhoneNumber = resources.getStringArray(R.array.data_phoneNumber)
         val dataPhotos = resources.getStringArray(R.array.data_photo)
+        val dataDescription = resources.getStringArray(R.array.data_description)
 
         val listPetStore = ArrayList<PetStore>()
         for (i in dataTitle.indices) {
-            val petstore = PetStore(dataTitle[i],dataOpenTime[i],dataAddress[i], dataPhoneNumber[i], dataPhotos[i])
+            val petstore = PetStore(dataTitle[i],dataOpenTime[i],dataAddress[i], dataPhoneNumber[i], dataPhotos[i],dataDescription[i])
             listPetStore.add(petstore)
         }
         return listPetStore
