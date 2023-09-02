@@ -32,10 +32,16 @@ class CategoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnCategoryLifestyle.setOnClickListener { view ->
-            val mBundle = Bundle()
-            mBundle.putString(EXTRA_NAME,"LifeStyle")
-            mBundle.putByte(EXTRA_STOCK,7)
-            view.findNavController().navigate(R.id.action_categoryFragment_to_detailCategoryFragment, mBundle)
+//            val mBundle = Bundle()
+//            mBundle.putString(EXTRA_NAME,"LifeStyle")
+//            mBundle.putByte(EXTRA_STOCK,7)
+//            view.findNavController().navigate(R.id.action_categoryFragment_to_detailCategoryFragment, mBundle)
+
+            //implements SafeArg
+            val toDetailCategoryFragment= CategoryFragmentDirections.actionCategoryFragmentToDetailCategoryFragment()
+            toDetailCategoryFragment.name = "LaifStail"
+            toDetailCategoryFragment.stock = 7
+            view.findNavController().navigate(toDetailCategoryFragment)
         }
     }
 
