@@ -11,16 +11,20 @@ import com.dicoding.mypetsubmisson.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
+
+    companion object {
+        const val EXTRA_DATA = "extra_data"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val data = if (Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra<PetStore>("DATA", PetStore::class.java)
+            intent.getParcelableExtra<PetStore>(EXTRA_DATA, PetStore::class.java)
         } else {
             @Suppress("DEPRECATION")
-            intent.getParcelableExtra<PetStore>("DATA")
+            intent.getParcelableExtra<PetStore>(EXTRA_DATA)
         }
 
         if (data != null) {

@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         listStoreAdapter.setOnItemClickCallback(object : ListStoreAdapter.OnItemClickCallback{
             override fun onItemClicked(data: PetStore) {
                 val intentToDetail = Intent(this@MainActivity,DetailActivity::class.java)
-                intentToDetail.putExtra("DATA",data)
+                intentToDetail.putExtra(DetailActivity.EXTRA_DATA,data)
                 startActivity(intentToDetail)
             }
         })

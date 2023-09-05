@@ -28,8 +28,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="end|bottom"
-                android:layout_marginBottom="10dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#36000000"
                 android:src="@drawable/ic_favourite" />
 
@@ -39,8 +39,7 @@
             android:id="@+id/tv_title"
             style="@style/TextContent.TitleDetail"
             android:text="@string/store_name"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_openTime"
@@ -58,39 +57,35 @@
         <TextView
             style="@style/TextContent.MarginText"
             android:text="@string/tentang_toko"
-            android:textStyle="bold"
-            android:textSize="17sp"
             android:textColor="@color/gray"
-            />
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_description"
             style="@style/TextContent"
             android:layout_marginStart="35dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="10dp"
-            android:text="@string/tentang_toko"
-            />
+            android:layout_marginEnd="16dp"
+            android:text="@string/tentang_toko" />
 
         <Button
             android:id="@+id/btn_call"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
             android:layout_gravity="center"
+            android:layout_marginTop="26dp"
             android:backgroundTint="@color/lightGreen"
-            android:text="@string/phone_number"
-            />
+            android:text="@string/phone_number" />
 
         <Button
             android:id="@+id/action_share"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="@string/share"
             android:layout_gravity="center"
-            android:backgroundTint="@color/gray"
             android:layout_marginBottom="16dp"
-            />
+            android:backgroundTint="@color/gray"
+            android:text="@string/share" />
 
     </LinearLayout>
 
