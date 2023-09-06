@@ -27,7 +27,7 @@ class MainViewModel : ViewModel() {
         }, ONE_SECOND.toLong(), ONE_SECOND.toLong())
     }
 
-    fun getElapsedTIme(): LiveData<Long?> {
+    fun getElapsedTIme(): LiveData<Long?> { //do observe
         return mElapsedTIme
     }
 

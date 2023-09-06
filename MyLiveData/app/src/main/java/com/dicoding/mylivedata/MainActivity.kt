@@ -24,6 +24,6 @@ class MainActivity : AppCompatActivity() {
             val newText = this@MainActivity.resources.getString(R.string.seconds, aLong)
             binding.timerTextview.text = newText
         }
-        liveDataTimerModel.getElapsedTIme().observe(this, elapsedTimeObserver)
+        liveDataTimerModel.getElapsedTIme().observe(this, elapsedTimeObserver) //asynchronous observe live data
     }
 }
