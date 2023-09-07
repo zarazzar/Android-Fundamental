@@ -9,9 +9,11 @@ import com.dicoding.restaurantreviewretrofit.data.response.PostReviewResponse
 import com.dicoding.restaurantreviewretrofit.data.response.Restaurant
 import com.dicoding.restaurantreviewretrofit.data.response.RestaurantResponse
 import com.dicoding.restaurantreviewretrofit.data.retrofit.ApiConfig
+import com.dicoding.restaurantreviewretrofit.util.Event
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class MainViewModel : ViewModel() {
     private val _restaurant = MutableLiveData<Restaurant>()
@@ -22,6 +24,9 @@ class MainViewModel : ViewModel() {
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
+
+    private val _snackbarText = MutableLiveData<Event<String>>()
+    val snackbarText: LiveData<Event<String>> = _snackbarText
 
     companion object{
         private const val TAG = "MainViewModel"
@@ -57,7 +62,7 @@ class MainViewModel : ViewModel() {
 
         fun postReview(review: String) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().postReview(RESTAURANT_ID, "MDP JAYA", review)
+        val client = ApiConfig.getApiService().postReview(RESTAURANT_ID, "Tono", review)
         client.enqueue(object : Callback<PostReviewResponse> {
             override fun onResponse(
                 call: Call<PostReviewResponse>,
@@ -66,6 +71,7 @@ class MainViewModel : ViewModel() {
                 _isLoading.value = false
                 if (response.isSuccessful) {
                     _listReview.value = response.body()?.customerReviews
+                    _snackbarText.value = Event(response.body()?.message.toString())
                 } else {
                     Log.e(TAG, "onFailure: ${response.message()}", )
                 }

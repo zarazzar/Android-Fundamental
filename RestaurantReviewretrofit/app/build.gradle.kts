@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.activity:activity-ktx:1.3.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")

@@ -3,31 +3,31 @@ package com.dicoding.restaurantreviewretrofit.ui
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.dicoding.restaurantreviewretrofit.data.response.CustomerReviewsItem
-import com.dicoding.restaurantreviewretrofit.data.response.PostReviewResponse
 import com.dicoding.restaurantreviewretrofit.data.response.Restaurant
-import com.dicoding.restaurantreviewretrofit.data.response.RestaurantResponse
-import com.dicoding.restaurantreviewretrofit.data.retrofit.ApiConfig
 import com.dicoding.restaurantreviewretrofit.databinding.ActivityMainBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.dicoding.restaurantreviewretrofit.util.Event
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    companion object {
-        private const val TAG = "MainActivity"
-        private const val RETAURANT_ID = "uewq1zg2zlskfw1e867"
-    }
+    private val mainViewModel by viewModels<MainViewModel>()
+
+
+//    companion object {
+//        private const val TAG = "MainActivity"
+//        private const val RETAURANT_ID = "uewq1zg2zlskfw1e867"
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,21 +39,26 @@ class MainActivity : AppCompatActivity() {
         val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
         binding.rvReview.addItemDecoration(itemDecoration)
 
+        //observe
+//        val mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
 
-        val mainViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(MainViewModel::class.java)
-        mainViewModel.restaurant.observe(this) {restaurant ->
+        mainViewModel.restaurant.observe(this) { restaurant ->
             setRestaurantData(restaurant)
         }
 
-        mainViewModel.listReview.observe(this) {consumerReviews ->
+        mainViewModel.listReview.observe(this) { consumerReviews ->
             setReviewData(consumerReviews)
         }
 
         mainViewModel.isLoading.observe(this) {
             showLoading(it)
         }
-
-
+        //observe snackbarText
+        mainViewModel.snackbarText.observe(this) {
+            it.getContentIfNotHandled()?.let { snackBarText ->
+                Snackbar.make(window.decorView.rootView, snackBarText, Snackbar.LENGTH_SHORT).show()
+            }
+        }
 
 //        findRestaurant()
 
