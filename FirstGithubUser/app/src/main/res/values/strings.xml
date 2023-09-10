@@ -16,6 +16,7 @@
     <string name="tab_followers">Followers</string>
     <string name="no_user_available">No User Available</string>
     <string name="share_profile">share github profile</string>
+    <string name="invisibletextview">InvisibleTextView</string>
 
 
 </resources>

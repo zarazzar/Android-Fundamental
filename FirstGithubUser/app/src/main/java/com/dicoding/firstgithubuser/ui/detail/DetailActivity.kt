@@ -42,8 +42,7 @@ class DetailActivity : AppCompatActivity() {
         val username = intent.getStringExtra(EXTRA_USERNAME)
         detailViewModel.getUserDetail(username!!)
 
-        //Observe DetailViewModel
-        detailViewModel.theDetails.observe(this) {detailUser ->
+        detailViewModel.theDetails.observe(this) { detailUser ->
             setUserDetails(detailUser)
         }
 
@@ -53,11 +52,11 @@ class DetailActivity : AppCompatActivity() {
 
         detailViewModel.snackbarText.observe(this) {
             it.getContentIfNotHandled().let { snackBarText ->
-                Snackbar.make(window.decorView.rootView, snackBarText!!, Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(window.decorView.rootView, snackBarText!!, Snackbar.LENGTH_SHORT)
+                    .show()
             }
         }
 
-        //initiate sectionPager and ViewOager
         val sectionPagerAdapter = SectionPagerAdapter(this)
         sectionPagerAdapter.username = intent.getStringExtra(EXTRA_USERNAME).toString()
         val viewPager: ViewPager2 = binding.viewPager
@@ -77,9 +76,11 @@ class DetailActivity : AppCompatActivity() {
         binding.tvFollowers.text = detailUser.followers.toString()
         Glide.with(this@DetailActivity)
             .load(detailUser.avatarUrl)
-            .apply(RequestOptions.circleCropTransform()
-                .placeholder(R.drawable.github)
-                .error(R.drawable.github))
+            .apply(
+                RequestOptions.circleCropTransform()
+                    .placeholder(R.drawable.github)
+                    .error(R.drawable.github)
+            )
             .into(binding.ivAvatar)
 
         supportActionBar?.apply {
@@ -99,7 +100,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_detail,menu)
+        menuInflater.inflate(R.menu.menu_detail, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -108,11 +109,12 @@ class DetailActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun setShare(selectedUser: Int){
-        when(selectedUser) {
+    private fun setShare(selectedUser: Int) {
+        when (selectedUser) {
             R.id.share_user -> {
                 val intent = Intent(Intent.ACTION_SEND)
-                val shareUser = "I Want to share this Github Profile! \nhttps://github.com/$userShare"
+                val shareUser =
+                    "I Want to share this Github Profile! \nhttps://github.com/$userShare"
                 intent.type = "text/plain"
                 intent.putExtra(Intent.EXTRA_TEXT, shareUser)
                 startActivity(Intent.createChooser(intent, "Share with..."))

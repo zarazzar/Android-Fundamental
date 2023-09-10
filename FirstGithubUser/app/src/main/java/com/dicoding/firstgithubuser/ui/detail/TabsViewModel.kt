@@ -13,7 +13,7 @@ import retrofit2.Response
 
 class TabsViewModel : ViewModel() {
 
-    private  val _isLoading = MutableLiveData<Boolean>()
+    private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
     private val _isZero = MutableLiveData<Boolean>()
@@ -29,7 +29,7 @@ class TabsViewModel : ViewModel() {
         private const val TAG = "TabsViewModel"
     }
 
-    fun getFollow(username: String, followingFirst : Boolean) {
+    fun getFollow(username: String, followingFirst: Boolean) {
         _isLoading.value = true
         val client = if (followingFirst) {
             ApiConfig.getApiService().getFollowing(username)
@@ -44,19 +44,19 @@ class TabsViewModel : ViewModel() {
                 _isLoading.value = false
                 if (response.isSuccessful) {
                     _listUserFollow.value = response.body()
-                    if (response.body().isNullOrEmpty()){
+                    if (response.body().isNullOrEmpty()) {
                         _isZero.value = true
                     }
                 } else {
                     _snackBar.value = Event(response.toString())
-                    Log.e(TAG, "onFailure: ${response.message()}" )
+                    Log.e(TAG, "onFailure: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<List<AllUsersItem>>, t: Throwable) {
                 _isLoading.value = false
                 _snackBar.value = Event(t.message.toString())
-                Log.e(TAG, "onFailure: ${t.message.toString()}" )
+                Log.e(TAG, "onFailure: ${t.message.toString()}")
             }
 
         })

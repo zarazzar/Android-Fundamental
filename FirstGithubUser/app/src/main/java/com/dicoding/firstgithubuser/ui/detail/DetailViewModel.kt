@@ -16,7 +16,7 @@ class DetailViewModel : ViewModel() {
     private val _theDetails = MutableLiveData<DetailUser>()
     val theDetails: LiveData<DetailUser> = _theDetails
 
-    private  val _isLoading = MutableLiveData<Boolean>()
+    private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
     private val _snackBar = MutableLiveData<Event<String>>()
@@ -25,7 +25,8 @@ class DetailViewModel : ViewModel() {
     companion object {
         private const val TAG = "DetailViewModel"
     }
-    fun getUserDetail (username: String) {
+
+    fun getUserDetail(username: String) {
         _isLoading.value = true
         val client = ApiConfig.getApiService().getDetails(username)
         client.enqueue(object : Callback<DetailUser> {
@@ -34,7 +35,7 @@ class DetailViewModel : ViewModel() {
                 if (response.isSuccessful) {
                     _theDetails.value = response.body()
                 } else {
-                    Log.e(TAG, "onFailure: ${response.message()} " )
+                    Log.e(TAG, "onFailure: ${response.message()} ")
                 }
             }
 

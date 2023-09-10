@@ -18,10 +18,12 @@ import com.dicoding.firstgithubuser.ui.detail.TabsViewModel
 class FollowingFragment : Fragment() {
 
     private lateinit var binding: FragmentFollowingBinding
+
     companion object {
         const val ARG_POSITION = "ARG_POSITION"
         val ARG_USERNAME: String? = "ARG_USERNAME"
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,17 +36,19 @@ class FollowingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentFollowingBinding.bind(view)
 
-        val position = arguments?.getInt(ARG_POSITION,0)
+        val position = arguments?.getInt(ARG_POSITION, 0)
         val username = arguments?.getString(ARG_USERNAME)
 
         var layoutManager = LinearLayoutManager(requireActivity())
         binding.rvFollows.layoutManager = layoutManager
 
 
-
-       val tabsViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[TabsViewModel::class.java]
+        val tabsViewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        )[TabsViewModel::class.java]
         // observe viewModel
-        tabsViewModel.listUserFollow.observe(viewLifecycleOwner) {listUser ->
+        tabsViewModel.listUserFollow.observe(viewLifecycleOwner) { listUser ->
             setDataFollow(listUser)
         }
 
@@ -63,7 +67,7 @@ class FollowingFragment : Fragment() {
         }
 
         if (username != null && savedInstanceState == null) {
-            tabsViewModel.getFollow(username,position == 1)
+            tabsViewModel.getFollow(username, position == 1)
         }
 
     }

@@ -19,15 +19,16 @@ interface ApiService {
 
     @GET("users/{username}")
     fun getDetails(
-        @Path("username") username : String
+        @Path("username") username: String
     ): Call<DetailUser>
 
     @GET("users/{username}/followers")
-    fun getFollowers (
-        @Path("username") username : String
+    fun getFollowers(
+        @Path("username") username: String
     ): Call<List<AllUsersItem>>
+
     @GET("users/{username}/following")
-    fun getFollowing (
-        @Path("username") username : String
+    fun getFollowing(
+        @Path("username") username: String
     ): Call<List<AllUsersItem>>
 }

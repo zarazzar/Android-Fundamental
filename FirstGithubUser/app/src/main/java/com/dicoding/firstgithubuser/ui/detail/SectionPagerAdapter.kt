@@ -8,14 +8,14 @@ import com.dicoding.firstgithubuser.ui.fragment.FollowingFragment
 
 class SectionPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
     override fun getItemCount(): Int {
-       return 2
+        return 2
     }
 
     var username: String = "-"
     override fun createFragment(position: Int): Fragment {
         val fragment = FollowingFragment()
         fragment.arguments = Bundle().apply {
-            putInt(FollowingFragment.ARG_POSITION,position + 1)
+            putInt(FollowingFragment.ARG_POSITION, position + 1)
             putString(FollowingFragment.ARG_USERNAME, username)
         }
         return fragment
