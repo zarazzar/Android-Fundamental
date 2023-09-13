@@ -22,12 +22,14 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnSave.setOnClickListener(this)
 
         userModel = intent.getParcelableExtra<UserModel>("USER") as UserModel
+        //extratypeform
         val formType = intent.getIntExtra(EXTRA_TYPE_FORM,0)
 
         var actionBarTitle = ""
         var btnTitle = ""
 
         when (formType) {
+            //extratypeform
             TYPE_ADD -> {
                 actionBarTitle = "Tambar Baru"
                 btnTitle = "Simpan"
@@ -101,6 +103,8 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
 
             val resultIntent = Intent()
             resultIntent.putExtra(EXTRA_RESULT,userModel)
+
+            //set result
             setResult(RESULT_CODE,resultIntent)
 
             finish()

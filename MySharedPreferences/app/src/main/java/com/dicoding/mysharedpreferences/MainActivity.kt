@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     //resultLauncher
     private val resultLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
-    ) {result: ActivityResult ->
+    ) { result: ActivityResult ->
+        //get result
         if (result.data != null && result.resultCode == FormUserPreferenceActivity.RESULT_CODE) {
-            userModel = result.data?.getParcelableExtra<UserModel>(FormUserPreferenceActivity.EXTRA_RESULT) as UserModel
+            userModel =
+                result.data?.getParcelableExtra<UserModel>(FormUserPreferenceActivity.EXTRA_RESULT) as UserModel
             populateView(userModel)
             checkForm(userModel)
         }
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnSave.text = getString(R.string.change)
                 isPreferenceEmpty = false
             }
+
             else -> {
                 binding.btnSave.text = getString(R.string.save)
                 isPreferenceEmpty = true
@@ -63,7 +66,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun populateView(userModel: UserModel) {
         binding.apply {
-            tvName.text = if (userModel.name.toString().isEmpty()) "Tidak Ada" else userModel.name
+            tvName.text = if (userModel.name.toString().isEmpty()) "Tidak Adaaa" else userModel.name
             tvAge.text =
                 if (userModel.age.toString().isEmpty()) "Tidak Ada" else userModel.age.toString()
             tvIsLoveMu.text = if (userModel.isLove) "Ya" else "Tidak"
@@ -84,8 +87,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         FormUserPreferenceActivity.EXTRA_TYPE_FORM,
                         FormUserPreferenceActivity.TYPE_ADD
                     )
-                    intent.putExtra("USER",userModel)
+                    intent.putExtra("USER", userModel)
                 }
+
                 else -> {
                     intent.putExtra(
                         FormUserPreferenceActivity.EXTRA_TYPE_FORM,
