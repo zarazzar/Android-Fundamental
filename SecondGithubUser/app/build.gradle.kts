@@ -13,9 +13,7 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
-
-        buildConfigField("String","KEY","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")
-
+        buildConfigField("String","KEY","\"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\"" )
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,6 +26,7 @@ android {
                 "proguard-rules.pro"
             )
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
