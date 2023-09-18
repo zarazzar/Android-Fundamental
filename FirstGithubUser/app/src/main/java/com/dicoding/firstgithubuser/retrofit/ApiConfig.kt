@@ -4,6 +4,7 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.dicoding.firstgithubuser.Bu
 
 class ApiConfig {
     companion object {
@@ -11,7 +12,7 @@ class ApiConfig {
             val authInterceptor = Interceptor { chain ->
                 val req = chain.request()
                 val requestHeaders = req.newBuilder()
-                    .addHeader("Authorization", "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")
+                    .addHeader("Authorization", "${BuildConfi}")
                     .build()
                 chain.proceed(requestHeaders)
             }

@@ -14,15 +14,17 @@ class DetailAdapter(private val userFollows: List<AllUsersItem>) :
     class DetailViewHolder(private val binding: ItemListBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(userFollow: AllUsersItem) {
-            binding.tvItemUsername.text = userFollow.login
-            Glide.with(itemView.context)
-                .load(userFollow.avatarUrl)
-                .apply(
-                    RequestOptions.circleCropTransform()
-                        .placeholder(R.drawable.github)
-                        .error(R.drawable.github)
-                )
-                .into(binding.ivItemAvatar)
+          binding.apply {
+              tvItemUsername.text = userFollow.login
+              Glide.with(itemView.context)
+                  .load(userFollow.avatarUrl)
+                  .apply(
+                      RequestOptions.circleCropTransform()
+                          .placeholder(R.drawable.github)
+                          .error(R.drawable.github)
+                  )
+                  .into(ivItemAvatar)
+          }
         }
     }
 

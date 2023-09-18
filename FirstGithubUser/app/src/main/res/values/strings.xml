@@ -17,6 +17,7 @@
     <string name="no_user_available">No User Available</string>
     <string name="share_profile">share github profile</string>
     <string name="invisibletextview">InvisibleTextView</string>
+    <string name="splash_screen">splash screen</string>
 
 
 </resources>

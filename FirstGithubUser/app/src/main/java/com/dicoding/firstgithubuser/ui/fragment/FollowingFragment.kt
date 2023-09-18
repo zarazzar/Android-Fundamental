@@ -19,11 +19,6 @@ class FollowingFragment : Fragment() {
 
     private lateinit var binding: FragmentFollowingBinding
 
-    companion object {
-        const val ARG_POSITION = "ARG_POSITION"
-        val ARG_USERNAME: String? = "ARG_USERNAME"
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,7 +34,7 @@ class FollowingFragment : Fragment() {
         val position = arguments?.getInt(ARG_POSITION, 0)
         val username = arguments?.getString(ARG_USERNAME)
 
-        var layoutManager = LinearLayoutManager(requireActivity())
+        val layoutManager = LinearLayoutManager(requireActivity())
         binding.rvFollows.layoutManager = layoutManager
 
 
@@ -78,11 +73,7 @@ class FollowingFragment : Fragment() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressBar.visibility = View.VISIBLE
-        } else {
-            binding.progressBar.visibility = View.GONE
-        }
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     private fun showZeroFollow(isZero: Boolean) {
@@ -93,5 +84,9 @@ class FollowingFragment : Fragment() {
         }
     }
 
+    companion object {
+        const val ARG_POSITION = "ARG_POSITION"
+        val ARG_USERNAME: String? = "ARG_USERNAME"
+    }
 
 }

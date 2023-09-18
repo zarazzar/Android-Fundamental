@@ -23,14 +23,6 @@ class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
 
-    companion object {
-        const val EXTRA_USERNAME = "extra_username"
-
-        private val TAB_TITLES = arrayOf(
-            "Following",
-            "Followers"
-        )
-    }
 
     private lateinit var userShare: String
 
@@ -70,18 +62,20 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun setUserDetails(detailUser: DetailUser) {
-        binding.tvName.text = detailUser.name
-        binding.tvUsername.text = detailUser.login
-        binding.tvFollowing.text = detailUser.following.toString()
-        binding.tvFollowers.text = detailUser.followers.toString()
-        Glide.with(this@DetailActivity)
-            .load(detailUser.avatarUrl)
-            .apply(
-                RequestOptions.circleCropTransform()
-                    .placeholder(R.drawable.github)
-                    .error(R.drawable.github)
-            )
-            .into(binding.ivAvatar)
+        binding.apply {
+            tvName.text = detailUser.name
+            tvUsername.text = detailUser.login
+            tvFollowing.text = detailUser.following.toString()
+            tvFollowers.text = detailUser.followers.toString()
+            Glide.with(this@DetailActivity)
+                .load(detailUser.avatarUrl)
+                .apply(
+                    RequestOptions.circleCropTransform()
+                        .placeholder(R.drawable.github)
+                        .error(R.drawable.github)
+                )
+                .into(ivAvatar)
+        }
 
         supportActionBar?.apply {
             title = detailUser.name
@@ -92,11 +86,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressBar.visibility = View.VISIBLE
-        } else {
-            binding.progressBar.visibility = View.GONE
-        }
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -130,6 +120,15 @@ class DetailActivity : AppCompatActivity() {
     override fun onNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    companion object {
+        const val EXTRA_USERNAME = "extra_username"
+
+        private val TAB_TITLES = arrayOf(
+            "Following",
+            "Followers"
+        )
     }
 
 
