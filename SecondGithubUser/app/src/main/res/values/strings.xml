@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="zarazzar">Ini Submission 1 Azzar</string>
+    <string name="avatar_sample" />
+    <string name="search_user">search user</string>
+
+    <string name="detail_title">Detail User</string>
+    <string name="avatars_desc">Detail Avatar</string>
+    <string name="followers">0</string>
+    <string name="following">0</string>
+    <string name="github_name">zarazzar example</string>
+    <string name="github_username">zarazzar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_following">Following</string>
+    <string name="tab_followers">Followers</string>
+    <string name="no_user_available">No User Available</string>
+    <string name="share_profile">share github profile</string>
+    <string name="invisibletextview">InvisibleTextView</string>
+    <string name="splash_screen">splash screen</string>
+
+
+</resources>
