@@ -10,9 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.firstgithubuser.R
 import com.dicoding.firstgithubuser.databinding.FragmentFollowingBinding
-import com.dicoding.firstgithubuser.response.AllUsersItem
+import com.dicoding.firstgithubuser.data.response.AllUsersItem
 import com.dicoding.firstgithubuser.ui.detail.DetailAdapter
-import com.dicoding.firstgithubuser.ui.detail.TabsViewModel
 
 
 class FollowingFragment : Fragment() {
@@ -23,7 +22,6 @@ class FollowingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_following, container, false)
     }
 

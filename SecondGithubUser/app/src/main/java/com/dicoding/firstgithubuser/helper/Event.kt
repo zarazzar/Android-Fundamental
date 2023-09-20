@@ -1,4 +1,4 @@
-package com.dicoding.firstgithubuser.util
+package com.dicoding.firstgithubuser.helper
 
 open class Event<out T>(private val content: T) {
     @Suppress("MemberVisibilituCanBePrivate")

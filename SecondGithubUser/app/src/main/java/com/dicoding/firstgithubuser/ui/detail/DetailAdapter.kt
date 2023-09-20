@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.firstgithubuser.R
 import com.dicoding.firstgithubuser.databinding.ItemListBinding
-import com.dicoding.firstgithubuser.response.AllUsersItem
+import com.dicoding.firstgithubuser.data.response.AllUsersItem
 
 class DetailAdapter(private val userFollows: List<AllUsersItem>) :
     RecyclerView.Adapter<DetailAdapter.DetailViewHolder>() {

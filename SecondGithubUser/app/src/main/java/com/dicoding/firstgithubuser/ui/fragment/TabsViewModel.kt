@@ -1,12 +1,12 @@
-package com.dicoding.firstgithubuser.ui.detail
+package com.dicoding.firstgithubuser.ui.fragment
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dicoding.firstgithubuser.response.AllUsersItem
-import com.dicoding.firstgithubuser.retrofit.ApiConfig
-import com.dicoding.firstgithubuser.util.Event
+import com.dicoding.firstgithubuser.data.response.AllUsersItem
+import com.dicoding.firstgithubuser.data.retrofit.ApiConfig
+import com.dicoding.firstgithubuser.helper.Event
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

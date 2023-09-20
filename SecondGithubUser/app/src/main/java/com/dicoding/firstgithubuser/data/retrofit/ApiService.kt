@@ -1,8 +1,8 @@
-package com.dicoding.firstgithubuser.retrofit
+package com.dicoding.firstgithubuser.data.retrofit
 
-import com.dicoding.firstgithubuser.response.AllUsersItem
-import com.dicoding.firstgithubuser.response.DetailUser
-import com.dicoding.firstgithubuser.response.ResponseUsers
+import com.dicoding.firstgithubuser.data.response.AllUsersItem
+import com.dicoding.firstgithubuser.data.response.DetailUser
+import com.dicoding.firstgithubuser.data.response.ResponseUsers
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

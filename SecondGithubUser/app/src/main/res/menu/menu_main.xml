@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/favIcon"
+        android:icon="@drawable/ic_favouritefilled"
+        android:title="@string/favorite"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/modeIcon"
+        android:icon="@drawable/ic_lightmode"
+        android:title="@string/mode"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,4 +1,4 @@
-package com.dicoding.firstgithubuser.retrofit
+package com.dicoding.firstgithubuser.data.retrofit
 
 import com.dicoding.firstgithubuser.BuildConfig
 import okhttp3.Interceptor
@@ -20,7 +20,8 @@ class ApiConfig {
                 .addInterceptor(authInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.github.com/")
+                //change to BuildConfig
+                .baseUrl(BuildConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
